@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="black">#FF000000</color>-->
+<!--    <color name="white">#FFFFFFFF</color>-->
+
+<!--    <color name="colorPrimary">#008577</color>-->
+<!--    <color name="colorPrimaryDark">#00574B</color>-->
+<!--    <color name="colorAccent">#D81B60</color>-->
+<!--    <color name="purple_200">#FFBB86FC</color>-->
+<!--    <color name="purple_500">#FF6200EE</color>-->
+<!--    <color name="purple_700">#FF3700B3</color>-->
+<!--    <color name="teal_200">#FF03DAC5</color>-->
+<!--    <color name="teal_700">#FF018786</color>-->
+
+    <color name="_bg__login_activity_ek2_color">#F9DEC9</color>
+
+
+    <color name="black_900">#000000</color>
+    <color name="gray_900">#3d0c11</color>
+    <color name="red_800">#d80032</color>
+    <color name="bluegray_100">#d9d9d9</color>
+    <color name="white_A700">#ffffff</color>
+    <color name="gray_100">#fbf3f5</color>
+
+
+</resources>

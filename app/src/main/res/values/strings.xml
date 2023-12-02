@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">donna_app</string>
+    <string name="lorem_ipsum">This is a sentence</string>
+    <string name="action_add">add</string>
+    <string name="title_hint">Title</string>
+    <string name="description_hint">Description</string>
+    <string name="idea_checkbox">Idea</string>
+    <string name="important_checkbox">Important</string>
+    <string name="todo_checkbox">To do</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="ok_button">OK</string>
+    <string name="sound_checkbox">On or Off</string>
+    <string name="settings_title">Settings</string>
+    <string name="sound_title">Sound</string>
+    <string name="amims_title">Animation Speed</string>
+    <string name="rb_fast">Fast</string>
+    <string name="rb_slow">Slow</string>
+    <string name="rb_none">None</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="action_settings">Action Setting</string>
+    <string name="first_fragment_label">first_fragment_label</string>
+    <string name="second_fragment_label">second_fragment_label</string>
+    <string name="email">Enter Email</string>
+    <string name="item_no">item no</string>
+    <string name="description">description</string>
+    <string name="save">save</string>
+    <string name="search">search</string>
+    <string name="delete">delete</string>
+    <string name="update">update</string>
+    <string name="view">view</string>
+    <string name="muntinlupa_">Muntinlupa Business High School \nGuidance</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="welcome_to_">WELCOME TO NAGS</string>
+    <string name="please_ente">Please enter your Username and Password:</string>
+    <string name="enter_passw">Enter Password:</string>
+    <string name="enter_email">Enter Email:</string>
+    <string name="welcome_message">Welcome to Student Home!</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="profile">Profile</string>
+    <string name="report_violation">Report a Violation</string>
+    <string name="schedule_coaching">Schedule a Coaching</string>
+    <!-- login_activity strings -->
+
+    <string name="ek_img_content">ExportKit Image</string>
+    <string name="welcome_to_nags_string">WELCOME TO NAGS</string>
+    <string name="muntinlupa_business_high_school_guidance_string">Muntinlupa Business High School Guidance</string>
+    <string name="please_enter_your_username_and_password__string">Please enter your Username and Password:</string>
+    <string name="enter_email__string">Enter Email:</string>
+    <string name="enter_password__string">Enter Password:</string>
+    <string name="login_string">LOGIN</string>
+
+
+    <string name="loading">Loadingâ€¦</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <string name="msg_notify_admini">NOTIFY , ADMINISTER, GENERAL PUBLICATION, &amp; SCHEDULING</string>
+    <string name="lbl_nags">NAGS</string>
+    <string name="msg_proceed_to_logi">Proceed to Login</string>
+    <string name="msg_muntinlupa_busi">Muntinlupa Business High School
+Guidance</string>
+    <string name="selectguidance">Select Guidance</string>
+
+
+</resources>

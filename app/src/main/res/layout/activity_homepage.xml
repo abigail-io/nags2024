@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameHomepageactivi"
+    style="@style/groupStylewhite_A700"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageRedbackground"
+        android:src="@drawable/img_redbackground"
+        android:layout_width="match_parent"
+        android:layout_height="627dp"
+        android:layout_gravity="start"
+        android:scaleType="fitXY"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:id="@+id/linearColumnrectanglenine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/viewRectangleNine"
+            android:layout_width="422dp"
+            android:layout_height="@dimen/_31pxv"
+            android:layout_gravity="start"
+            android:background="@color/gray_900" />
+
+        <LinearLayout
+            android:id="@+id/linearRowmuntinlupabusi"
+            style="@style/groupStylegray_100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageImageremovebg"
+                android:src="@drawable/img_imageremovebg"
+                android:layout_width="@dimen/_76pxh"
+                android:layout_height="@dimen/_74pxh"
+                android:layout_marginStart="@dimen/_16pxh"
+                android:layout_marginTop="@dimen/_6pxv"
+                android:layout_marginBottom="@dimen/_7pxv"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/txtMuntinlupaBusi"
+                style="@style/txtBreeSerifregular15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_21pxh"
+                android:layout_marginTop="@dimen/_24pxv"
+                android:layout_marginEnd="@dimen/_23pxh"
+                android:layout_marginBottom="@dimen/_22pxv"
+                android:layout_weight="0.75"
+                android:text="Muntinlupa Business High School"
+                android:fontFamily="@font/anton"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageImageremovebgOne"
+            android:src="@drawable/img_imageremovebg"
+            android:layout_width="@dimen/_181pxh"
+            android:layout_height="@dimen/_181pxh"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_83pxh"
+            android:layout_marginTop="@dimen/_44pxv"
+            android:layout_marginEnd="@dimen/_83pxh"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription" />
+
+
+        <TextView
+            android:id="@+id/txtNAGS"
+            style="@style/txtCodaCaptionextrabold18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_83pxh"
+            android:layout_marginTop="@dimen/_21pxv"
+            android:layout_marginEnd="@dimen/_83pxh"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="NAGS"
+            android:fontFamily="@font/anton"/>
+
+        <TextView
+            android:id="@+id/txtPrice"
+            style="@style/txtFaustinaromanregular14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_83pxh"
+            android:layout_marginTop="@dimen/_2pxv"
+            android:layout_marginEnd="@dimen/_72pxh"
+            android:gravity="center_horizontal"
+            android:text="Notify , Administer, General Publication and Scheduling" />
+
+        <LinearLayout
+            android:id="@+id/linearButton3"
+            style="@style/groupStylegray_900cornerRadius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_83pxh"
+            android:layout_marginTop="@dimen/_43pxv"
+            android:layout_marginEnd="@dimen/_83pxh"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/txtMontserratsemibold18"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/_33pxh"
+            android:layout_marginTop="@dimen/_2pxv"
+            android:layout_marginEnd="@dimen/_33pxh"
+            android:background="@color/gray_900"
+            android:gravity="center_horizontal"
+            android:text="Proceed to Login"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+
+        <View
+            android:id="@+id/viewRectangleNineOne"
+            android:layout_width="match_parent"
+            android:layout_height="81dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="@dimen/_85pxv"
+            android:background="@color/gray_900" />
+
+    </LinearLayout>
+</RelativeLayout>

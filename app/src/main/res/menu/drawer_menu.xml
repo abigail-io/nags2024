@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Profile" />
+    <item
+        android:id="@+id/nav_report_violation"
+        android:title="Report a Violation" />
+    <item
+        android:id="@+id/nav_request_goodmoral"
+        android:title="Request a Good Moral" />
+    <item
+        android:id="@+id/nav_schedule_coaching"
+        android:title="Schedule a Coaching" />
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Logout" />
+    <!-- Add more items as needed -->
+</menu>

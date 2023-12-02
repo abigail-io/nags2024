@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Donna_app" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Donna_app" parent="Base.Theme.Donna_app" />
+
+<!--    <style name="DialogTheme" parent="Theme.MaterialComponents.DayNight.Dialog">-->
+<!--        <item name="colorAccent">@color/black_900</item>-->
+<!--    </style>-->
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColorPrimary">@color/red_800</item>
+        <!-- Add other style attributes as needed -->
+    </style>
+</resources>
