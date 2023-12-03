@@ -4,6 +4,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.SearchView; // Add this import statement
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,6 +30,8 @@ public class DashboardActivity extends AppCompatActivity {
 
     private ListView listView;
     private List<StudentRecord> dataList;
+    private StudentRecordAdapter adapter;
+    private SearchView searchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +40,33 @@ public class DashboardActivity extends AppCompatActivity {
 
         // Initialize views
         listView = findViewById(R.id.listView);
+        searchView = findViewById(R.id.searchView);
 
         // Initialize data list
         dataList = new ArrayList<>();
 
         // Execute the method to perform the initial API call
         getDataFromApi();
+
+        // Set up search functionality
+        setupSearchView();
+    }
+
+    private void setupSearchView() {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                // Handle the search query submission (if needed)
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                // Filter the list based on the search query
+                adapter.getFilter().filter(newText);
+                return true;
+            }
+        });
     }
 
     private void getDataFromApi() {
@@ -67,9 +92,6 @@ public class DashboardActivity extends AppCompatActivity {
                                 String dateRecorded = object.getString("date_recorded");
                                 String remarks = object.getString("remarks");
                                 String status = object.getString("status");
-//                                int studentId = object.getInt("student_id");
-//                                int violationId = object.getInt("violation_id");
-//                                int guidanceId = object.getInt("guidance_id");
                                 String violationName = object.getJSONObject("violations").getString("name");
                                 String guidanceName = object.getJSONObject("guidances").getString("fname");
                                 String studentName = object.getJSONObject("students").getString("fname");
@@ -80,6 +102,7 @@ public class DashboardActivity extends AppCompatActivity {
 
                             StudentRecordAdapter adapter = new StudentRecordAdapter(DashboardActivity.this, dataList);
                             listView.setAdapter(adapter);
+                            DashboardActivity.this.adapter = adapter;
 
                         } catch (JSONException e) {
                             e.printStackTrace();
