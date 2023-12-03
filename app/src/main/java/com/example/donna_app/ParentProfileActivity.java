@@ -35,8 +35,7 @@ public class ParentProfileActivity extends AppCompatActivity {
 
     private Button editProfileButton;
 
-    // Externalize the endpoint for easier modification
-    private static final String PROFILE_ENDPOINT = "http://192.168.100.117:8000/api/profileparents";
+    private static final String PROFILE_ENDPOINT = "http://192.168.100.117:8000/api/profileparent";
     private static final int EDIT_PROFILE_REQUEST_CODE = 1;
 
     @Override
@@ -73,7 +72,6 @@ public class ParentProfileActivity extends AppCompatActivity {
 
         if (requestCode == EDIT_PROFILE_REQUEST_CODE) {
             if (resultCode == RESULT_OK) {
-                // The profile was successfully updated, fetch the updated profile
                 fetchUserProfile();
             }
         }
@@ -84,11 +82,12 @@ public class ParentProfileActivity extends AppCompatActivity {
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
-                PROFILE_ENDPOINT,  // Use the externalized endpoint
+                PROFILE_ENDPOINT,
                 null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
+                        Log.d("FetchProfile", "Profile data received: " + response.toString());
                         showUserProfile(response);
                     }
                 },

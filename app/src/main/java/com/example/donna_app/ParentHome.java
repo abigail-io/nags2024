@@ -36,7 +36,7 @@ public class ParentHome extends AppCompatActivity {
     private NavigationView navigationView;
     private CalendarView calendarView;
     private TextView welcomeTextView;
-    private String mJSONURLString = "http://192.168.100.117:8000/api/logout";
+    private String mJSONURLString = "http://192.168.55.119:8000/api/logout";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +49,6 @@ public class ParentHome extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawerLayout);
         navigationView = findViewById(R.id.navigationView);
         welcomeTextView = findViewById(R.id.textViewWelcome);
-
-        // Initialize calendarView, hourPicker, and minutePicker if needed
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -71,12 +69,10 @@ public class ParentHome extends AppCompatActivity {
                         startActivity(profileIntent);
                         break;
                     case R.id.nav_schedule_coaching:
-                        // Start CoachingScheduling activity when "Schedule Coaching" is selected
                         Intent coachingScheduleIntent = new Intent(ParentHome.this, CoachingScheduling.class);
                         startActivity(coachingScheduleIntent);
                         break;
                     case R.id.nav_logout:
-                        // Logout when "Logout" is selected
                         logout();
                         break;
                 }

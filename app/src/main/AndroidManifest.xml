@@ -49,6 +49,15 @@
         <activity android:name=".ParentHome">
 
         </activity>
+        <activity android:name=".ParentProfileActivity">
+
+        </activity>
+        <activity android:name=".ParentDashboardActivity">
+
+        </activity>
+<!--        <activity android:name=".EditParentProfileActivity">-->
+
+<!--        </activity>-->
 <!--        <activity android:name=".CoachingScheduling"-->
 <!--            android:theme="@style/DialogTheme">-->
 

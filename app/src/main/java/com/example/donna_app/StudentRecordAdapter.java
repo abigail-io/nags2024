@@ -38,7 +38,6 @@ public class StudentRecordAdapter extends ArrayAdapter<StudentRecord> {
         TextView studentNameTextView = convertView.findViewById(R.id.studentNameTextView);
 
         if (record != null) {
-            // Set data to TextViews
             dateRecordedTextView.setText(record.getDateRecorded());
             remarksTextView.setText(record.getRemarks());
             statusTextView.setText(record.getStatus());

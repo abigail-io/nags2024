@@ -37,7 +37,7 @@ import java.util.Map;
 
 public class EditProfileActivity extends AppCompatActivity {
     private static final String TAG = "EditProfile";
-    private static final String API_URL_PROFILE_UPDATE = "http://192.168.100.117:8000/api/update";
+    private static final String API_URL_PROFILE_UPDATE = "http://192.168.55.119:8000/api/update";
 
     private ImageView imgGallery;
     private final int GALLERY_REQ_CODE = 1000;
@@ -92,15 +92,10 @@ public class EditProfileActivity extends AppCompatActivity {
             return;
         }
 
-        // Check if an image is selected
         if (imgGallery.getDrawable() == null) {
-            // No image selected, proceed to update only profile information
             updateProfileInfo(studentFName, studentLName, null);
         } else {
-            // Convert selected image to base64
             String base64Image = getImageBase64();
-
-            // Update both profile information and image
             updateProfileInfo(studentFName, studentLName, base64Image);
         }
     }
@@ -112,7 +107,6 @@ public class EditProfileActivity extends AppCompatActivity {
             profileUpdate.put("lname", lname);
 
             if (base64Image != null) {
-                // Include image update if base64Image is provided
                 profileUpdate.put("uploads", base64Image);
             }
         } catch (JSONException e) {
@@ -135,9 +129,7 @@ public class EditProfileActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
 
                             if (status.equals("success")) {
-                                // Notify the calling activity that the update was successful
                                 setResult(RESULT_OK);
-                                // Close the EditProfileActivity
                                 finish();
                             }
                         } catch (JSONException e) {
@@ -152,7 +144,6 @@ public class EditProfileActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Error updating profile", Toast.LENGTH_LONG).show();
                         Log.e(TAG, "Error: " + error.toString());
 
-                        // Log the error response if available
                         if (error.networkResponse != null && error.networkResponse.data != null) {
                             try {
                                 String errorResponse = new String(error.networkResponse.data, "UTF-8");

@@ -5,11 +5,11 @@ public class StudentRecord {
     private String remarks;
     private int studentId;
     private int violationId;
-    private String violationName; // New property
+    private String violationName;
     private int guidanceId;
     private String status;
-    private String guidanceName; // New property
-    private String studentName; // New property
+    private String guidanceName;
+    private String studentName;
 
     public StudentRecord(String dateRecorded, String remarks, String status,  String violationName, String guidanceName, String studentName) {
         this.dateRecorded = dateRecorded;
