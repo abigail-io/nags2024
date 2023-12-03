@@ -38,6 +38,8 @@ public class StudentRecordAdapter extends ArrayAdapter<StudentRecord> implements
         TextView dateRecordedTextView = convertView.findViewById(R.id.dateRecordedTextView);
         TextView remarksTextView = convertView.findViewById(R.id.remarksTextView);
         TextView statusTextView = convertView.findViewById(R.id.statusTextView);
+        TextView punishmentNameTextView = convertView.findViewById(R.id.punishmentNameTextView);
+
         TextView violationNameTextView = convertView.findViewById(R.id.violationNameTextView);
         TextView guidanceNameTextView = convertView.findViewById(R.id.guidanceNameTextView);
         TextView studentNameTextView = convertView.findViewById(R.id.studentNameTextView);
@@ -46,6 +48,8 @@ public class StudentRecordAdapter extends ArrayAdapter<StudentRecord> implements
             dateRecordedTextView.setText(record.getDateRecorded());
             remarksTextView.setText(record.getRemarks());
             statusTextView.setText(record.getStatus());
+            punishmentNameTextView.setText(record.getPunishmentName());
+
             violationNameTextView.setText(record.getViolationName());
             guidanceNameTextView.setText(record.getGuidanceName());
             studentNameTextView.setText(record.getStudentName());

@@ -8,13 +8,16 @@ public class StudentRecord {
     private String violationName;
     private int guidanceId;
     private String status;
+    private String punishmentName;
+
     private String guidanceName;
     private String studentName;
 
-    public StudentRecord(String dateRecorded, String remarks, String status,  String violationName, String guidanceName, String studentName) {
+    public StudentRecord(String dateRecorded, String remarks, String status, String PunishmentName, String violationName, String guidanceName, String studentName) {
         this.dateRecorded = dateRecorded;
         this.remarks = remarks;
         this.status = status;
+        this.punishmentName = punishmentName;
         this.violationName = violationName;
         this.guidanceName = guidanceName;
         this.studentName = studentName;
@@ -32,6 +35,9 @@ public class StudentRecord {
     }
     public String getStatus() {
         return status;
+    }
+    public String getPunishmentName() {
+        return punishmentName;
     }
 
     public String getViolationName() {

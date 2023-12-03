@@ -40,6 +40,8 @@ public class StudentProfileActivity extends AppCompatActivity {
     private TextView fnameTextView;
     private TextView lnameTextView;
     private TextView sectionIdTextView;
+    private TextView yearIdTextView;
+
     private TextView courseIdTextView;
     private TextView familyIdTextView;
     private TextView familyLnameTextView;
@@ -60,6 +62,7 @@ public class StudentProfileActivity extends AppCompatActivity {
         fnameTextView = findViewById(R.id.fnameTextView);
         lnameTextView = findViewById(R.id.lnameTextView);
         sectionIdTextView = findViewById(R.id.sectionIdTextView);
+        yearIdTextView = findViewById(R.id.yearIdTextView);
         courseIdTextView = findViewById(R.id.courseIdTextView);
         familyIdTextView = findViewById(R.id.familyIdTextView);
         familyLnameTextView = findViewById(R.id.familyLnameTextView);
@@ -133,6 +136,7 @@ public class StudentProfileActivity extends AppCompatActivity {
             String studentId = profileData.getString("student_id");
             String studentImgUrl = profileData.getString("student_img");
             String sectionId = profileData.getString("sectioname");
+            String yearId = profileData.getString("yearname");
             String courseId = profileData.getString("coursename");
             String familyId = profileData.getString("familyfname");
             String familyLname = profileData.getString("familylname");
@@ -142,6 +146,7 @@ public class StudentProfileActivity extends AppCompatActivity {
             fnameTextView.setText("First Name: " + studentName);
             lnameTextView.setText("Last Name: " + studentLname);
             sectionIdTextView.setText("Section: " + sectionId);
+            yearIdTextView.setText("Year Level: " + yearId);
             courseIdTextView.setText("Course: " + courseId);
             familyIdTextView.setText("Family First Name: " + familyId);
             familyLnameTextView.setText("Family Last Name: " + familyLname);

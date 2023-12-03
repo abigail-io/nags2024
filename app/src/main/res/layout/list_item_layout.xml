@@ -1,105 +1,60 @@
-
-
-    <TableLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:stretchColumns="*">
+    android:orientation="vertical">
 
-    <!-- Header Row -->
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/studentNameLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Student Name "
-            android:textSize="12sp"/>
-
-        <TextView
-            android:id="@+id/dateRecordedLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Date Recorded: "
-            android:textSize="12sp"/>
-
-        <TextView
-            android:id="@+id/remarksLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Remarks: "
-            android:textSize="12sp"/>
-
-        <TextView
-            android:id="@+id/statusLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Status: "
-            android:textSize="12sp"/>
-
-        <TextView
-            android:id="@+id/violationNameLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Violation: "
-            android:textSize="12sp"/>
-
-        <TextView
-            android:id="@+id/guidanceNameLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Guidance Name "
-            android:textSize="12sp"/>
-    </TableRow>
 
     <!-- Data Row -->
-    <TableRow
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/studentNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="Student Name"
             android:textSize="12sp"/>
 
         <TextView
             android:id="@+id/dateRecordedTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="Date Recorded"
             android:textSize="12sp"/>
 
         <TextView
             android:id="@+id/remarksTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="Remarks"
             android:textSize="12sp"/>
 
         <TextView
             android:id="@+id/statusTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="Status"
             android:textSize="12sp"/>
-
+        <TextView
+            android:id="@+id/punishmentNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Punishment"
+            android:textSize="12sp"/>
         <TextView
             android:id="@+id/violationNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="Violation"
             android:textSize="12sp"/>
-
         <TextView
             android:id="@+id/guidanceNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=""
+            android:text="Guidance "
             android:textSize="12sp"/>
-    </TableRow>
-
-</TableLayout>
+    </LinearLayout>
+</LinearLayout>

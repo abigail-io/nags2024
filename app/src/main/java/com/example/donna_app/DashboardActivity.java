@@ -92,11 +92,12 @@ public class DashboardActivity extends AppCompatActivity {
                                 String dateRecorded = object.getString("date_recorded");
                                 String remarks = object.getString("remarks");
                                 String status = object.getString("status");
+                                String punishmentName = object.getJSONObject("punishments").getString("name");
                                 String violationName = object.getJSONObject("violations").getString("name");
                                 String guidanceName = object.getJSONObject("guidances").getString("fname");
                                 String studentName = object.getJSONObject("students").getString("fname");
 
-                                StudentRecord record = new StudentRecord(dateRecorded, remarks, status, violationName , guidanceName, studentName);
+                                StudentRecord record = new StudentRecord(dateRecorded, remarks, status, punishmentName, violationName , guidanceName, studentName);
                                 dataList.add(record);
                             }
 
