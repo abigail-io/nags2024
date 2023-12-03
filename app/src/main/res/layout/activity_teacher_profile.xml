@@ -1,0 +1,42 @@
+<!-- activity_parent_profile.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TeacherProfileActivity">
+
+    <TextView
+        android:id="@+id/userEmailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="User Email: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/fnameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userEmailTextView"
+        android:layout_marginTop="8dp"
+        android:text="First Name: "
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/lnameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fnameTextView"
+        android:layout_marginTop="8dp"
+        android:text="Last Name: "
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/editProfileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lnameTextView"
+        android:layout_marginTop="16dp"
+        android:text="Edit Profile"
+        android:textSize="18sp" />
+</RelativeLayout>

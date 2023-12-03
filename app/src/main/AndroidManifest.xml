@@ -52,12 +52,17 @@
         <activity android:name=".ParentProfileActivity">
 
         </activity>
-        <activity android:name=".ParentDashboardActivity">
+        <activity android:name=".EditParentProfileActivity">
 
         </activity>
-<!--        <activity android:name=".EditParentProfileActivity">-->
+        <activity android:name=".TeacherHome">
+        </activity>
+        <activity android:name=".TeacherProfileActivity">
 
-<!--        </activity>-->
+        </activity>
+        <activity android:name=".EditTeacherProfileActivity">
+
+        </activity>
 <!--        <activity android:name=".CoachingScheduling"-->
 <!--            android:theme="@style/DialogTheme">-->
 

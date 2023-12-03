@@ -25,29 +25,24 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ParentProfileActivity extends AppCompatActivity {
+public class TeacherProfileActivity extends AppCompatActivity {
 
     private TextView userEmailTextView;
     private TextView fnameTextView;
     private TextView lnameTextView;
-    private TextView phoneTextView;
-    private TextView addressTextView;
-
     private Button editProfileButton;
 
-    private static final String PROFILE_ENDPOINT = "http://192.168.55.119:8000/api/profileparent";
+    private static final String PROFILE_ENDPOINT = "http://192.168.55.119:8000/api/profileteacher";
     private static final int EDIT_PROFILE_REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_parent_profile);
+        setContentView(R.layout.activity_teacher_profile);
 
         userEmailTextView = findViewById(R.id.userEmailTextView);
         fnameTextView = findViewById(R.id.fnameTextView);
         lnameTextView = findViewById(R.id.lnameTextView);
-        phoneTextView = findViewById(R.id.phoneTextView);
-        addressTextView = findViewById(R.id.addressTextView);
 
         editProfileButton = findViewById(R.id.editProfileButton);
 
@@ -62,7 +57,7 @@ public class ParentProfileActivity extends AppCompatActivity {
     }
 
     private void openEditProfileActivity() {
-        Intent intent = new Intent(this, EditParentProfileActivity.class);
+        Intent intent = new Intent(this, EditTeacherProfileActivity.class);
         startActivityForResult(intent, EDIT_PROFILE_REQUEST_CODE);
     }
 
@@ -116,14 +111,11 @@ public class ParentProfileActivity extends AppCompatActivity {
             String userEmail = profileData.getString("email");
             String parentName = profileData.getString("fname");
             String parentLname = profileData.getString("lname");
-            String parentPhone = profileData.getString("phone");
-            String parentAddress = profileData.getString("address");
+
 
             userEmailTextView.setText("User Email: " + userEmail);
             fnameTextView.setText("First Name: " + parentName);
             lnameTextView.setText("Last Name: " + parentLname);
-            phoneTextView.setText("Phone: " + parentPhone);
-            addressTextView.setText("Address: " + parentAddress);
 
         } catch (JSONException e) {
             Log.e("ShowProfile", "Error displaying profile data: " + e.getMessage());

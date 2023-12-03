@@ -79,6 +79,10 @@ public class LoginActivity extends AppCompatActivity  {
                                     Intent intent = new Intent(LoginActivity.this, ParentHome.class);
                                     startActivity(intent);
                                     finish();
+                                } else if ("teacher".equals(userRole)) {
+                                    Intent intent = new Intent(LoginActivity.this, TeacherHome.class);
+                                    startActivity(intent);
+                                    finish();
                                 } else {
                                     // Handle other user roles or show a message
                                     Toast.makeText(mContext, "Login successful!", Toast.LENGTH_LONG).show();
