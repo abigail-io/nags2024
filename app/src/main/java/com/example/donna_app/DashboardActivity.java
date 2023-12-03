@@ -45,16 +45,11 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     private void getDataFromApi() {
-        // Replace with your Laravel backend URL and endpoint
-        String apiUrl = "http://192.168.100.117:8000/api/dashboard";
+        String apiUrl = "http://192.168.55.119:8000/api/dashboard";
 
-        // Retrieve access token from SharedPreferences
         String accessToken = retrieveAccessToken();
-
-        // Create a request queue
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
-        // Create a JSON object request
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
                 Request.Method.GET,
                 apiUrl,
@@ -62,14 +57,11 @@ public class DashboardActivity extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        // Log success message
                         Log.d("API Request", "Success");
 
-                        // Parse the JSON object and update the UI
                         try {
                             JSONArray dataArray = response.getJSONArray("data");
 
-                            // Process each object in the array
                             for (int i = 0; i < dataArray.length(); i++) {
                                 JSONObject object = dataArray.getJSONObject(i);
                                 String dateRecorded = object.getString("date_recorded");
@@ -82,18 +74,15 @@ public class DashboardActivity extends AppCompatActivity {
                                 String guidanceName = object.getJSONObject("guidances").getString("fname");
                                 String studentName = object.getJSONObject("students").getString("fname");
 
-                                // Create a StudentRecord object and add it to the data list
                                 StudentRecord record = new StudentRecord(dateRecorded, remarks, status, violationName , guidanceName, studentName);
                                 dataList.add(record);
                             }
 
-                            // Set up the adapter
                             StudentRecordAdapter adapter = new StudentRecordAdapter(DashboardActivity.this, dataList);
                             listView.setAdapter(adapter);
 
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            // Log error message
                             Log.e("API Request", "Failed to parse JSON response: " + e.getMessage());
                         }
                     }
@@ -107,14 +96,12 @@ public class DashboardActivity extends AppCompatActivity {
                 }) {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
-                // Add the access token to the headers
                 Map<String, String> headers = new HashMap<>();
                 headers.put("Authorization", "Bearer " + accessToken);
                 return headers;
             }
         };
 
-        // Add the request to the queue
         requestQueue.add(jsonObjectRequest);
     }
 
