@@ -70,7 +70,7 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     private void getDataFromApi() {
-        String apiUrl = "http://192.168.55.119:8000/api/dashboard";
+        String apiUrl = "http://192.168.100.117:8000/api/dashboard";
 
         String accessToken = retrieveAccessToken();
         RequestQueue requestQueue = Volley.newRequestQueue(this);
