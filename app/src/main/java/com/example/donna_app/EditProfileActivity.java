@@ -38,7 +38,6 @@ import java.util.Map;
 public class EditProfileActivity extends AppCompatActivity {
     private static final String TAG = "EditProfile";
     private static final String API_URL_PROFILE_UPDATE = "http://192.168.100.117:8000/api/update";
-
     private ImageView imgGallery;
     private final int GALLERY_REQ_CODE = 1000;
 

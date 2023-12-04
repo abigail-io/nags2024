@@ -12,7 +12,6 @@
         android:layout_marginTop="16dp"
         android:text="User Email: "
         android:textSize="18sp" />
-
     <TextView
         android:id="@+id/fnameTextView"
         android:layout_width="wrap_content"

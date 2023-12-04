@@ -51,7 +51,6 @@ public class ParentHome extends AppCompatActivity {
         welcomeTextView = findViewById(R.id.textViewWelcome);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open_drawer, R.string.close_drawer);
         drawerLayout.addDrawerListener(drawerToggle);
         drawerToggle.syncState();

@@ -47,7 +47,6 @@ public class StudentProfileActivity extends AppCompatActivity {
     private TextView familyLnameTextView;
 
     private Button editProfileButton;
-
     private static final String PROFILE_ENDPOINT = "http://192.168.100.117:8000/api/profile";
     private static final int EDIT_PROFILE_REQUEST_CODE = 1;
 

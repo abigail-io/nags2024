@@ -112,7 +112,6 @@ public class TeacherProfileActivity extends AppCompatActivity {
             String parentName = profileData.getString("fname");
             String parentLname = profileData.getString("lname");
 
-
             userEmailTextView.setText("User Email: " + userEmail);
             fnameTextView.setText("First Name: " + parentName);
             lnameTextView.setText("Last Name: " + parentLname);

@@ -60,7 +60,6 @@ public class GoodMoralRequest extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 deleteExistingRequest();
-
             }
         });
         getDataFromApi();

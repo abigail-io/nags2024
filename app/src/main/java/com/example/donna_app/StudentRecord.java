@@ -29,7 +29,6 @@ public class StudentRecord {
     public String getDateRecorded() {
         return dateRecorded;
     }
-
     public String getRemarks() {
         return remarks;
     }

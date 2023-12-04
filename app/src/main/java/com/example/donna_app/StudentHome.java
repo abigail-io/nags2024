@@ -50,7 +50,6 @@ public class StudentHome extends AppCompatActivity {
         navigationView = findViewById(R.id.navigationView);
         welcomeTextView = findViewById(R.id.textViewWelcome);
 
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open_drawer, R.string.close_drawer);

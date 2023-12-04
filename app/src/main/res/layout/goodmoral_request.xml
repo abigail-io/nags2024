@@ -9,7 +9,6 @@
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
     tools:context=".GoodMoralRequest">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
