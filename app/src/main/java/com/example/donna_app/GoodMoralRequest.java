@@ -1,5 +1,6 @@
 package com.example.donna_app;
 
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
@@ -166,9 +168,9 @@ public class GoodMoralRequest extends AppCompatActivity {
 
         JSONObject requestData = new JSONObject();
         try {
-            requestData.put("description", "Good Moral");
-            requestData.put("status", "YourNewStatus");
-            requestData.put("schedule_date", "YourNewScheduleDate");
+            requestData.put("description", "");
+            requestData.put("status", "");
+            requestData.put("schedule_date", "");
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -216,7 +218,23 @@ public class GoodMoralRequest extends AppCompatActivity {
         };
         requestQueue.add(jsonObjectRequest);
     }
+
     private void deleteExistingRequest() {
+        new AlertDialog.Builder(this)
+                .setTitle("Confirm Delete")
+                .setMessage("Are you sure you want to delete this record?")
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // User clicked yes, proceed with the deletion
+                        performDeleteRequest();
+                    }
+                })
+                .setNegativeButton(android.R.string.no, null) // do nothing on no
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
+    }
+
+    private void performDeleteRequest() {
         String apiUrl = "http://192.168.100.117:8000/api/goodmorals/delete";
 
         String accessToken = retrieveAccessToken();
@@ -272,5 +290,4 @@ public class GoodMoralRequest extends AppCompatActivity {
         studentIdTextView.setText("");
         scheduleDateTextView.setText("");
     }
-
 }

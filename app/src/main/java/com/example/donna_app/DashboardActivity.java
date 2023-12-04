@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.SearchView; // Add this import statement
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -38,17 +37,13 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard_student);
 
-        // Initialize views
         listView = findViewById(R.id.listView);
         searchView = findViewById(R.id.searchView);
 
-        // Initialize data list
         dataList = new ArrayList<>();
 
-        // Execute the method to perform the initial API call
         getDataFromApi();
 
-        // Set up search functionality
         setupSearchView();
     }
 
@@ -56,18 +51,17 @@ public class DashboardActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                // Handle the search query submission (if needed)
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                // Filter the list based on the search query
                 adapter.getFilter().filter(newText);
                 return true;
             }
         });
     }
+
     private void getDataFromApi() {
         String apiUrl = "http://192.168.100.117:8000/api/dashboard";
 
@@ -88,15 +82,15 @@ public class DashboardActivity extends AppCompatActivity {
 
                             for (int i = 0; i < dataArray.length(); i++) {
                                 JSONObject object = dataArray.getJSONObject(i);
-                                String dateRecorded = object.getString("date_recorded");
+                                String dateRecorded = object.getString("dateRecorded");
                                 String remarks = object.getString("remarks");
                                 String status = object.getString("status");
-                                String punishmentName = object.getJSONObject("punishments").getString("name");
-                                String violationName = object.getJSONObject("violations").getString("name");
-                                String guidanceName = object.getJSONObject("guidances").getString("fname");
-                                String studentName = object.getJSONObject("students").getString("fname");
+                                String punishmentName = object.getString("punishmentName");
+                                String violationName = object.getString("violationName");
+                                String guidanceName = object.getString("guidanceName");
+                                String studentName = object.getString("studentName");
 
-                                StudentRecord record = new StudentRecord(dateRecorded, remarks, status, punishmentName, violationName , guidanceName, studentName);
+                                StudentRecord record = new StudentRecord(dateRecorded, remarks, status, punishmentName, violationName, guidanceName, studentName);
                                 dataList.add(record);
                             }
 

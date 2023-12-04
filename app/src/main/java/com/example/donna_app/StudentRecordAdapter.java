@@ -62,6 +62,7 @@ public class StudentRecordAdapter extends ArrayAdapter<StudentRecord> implements
     public int getCount() {
         return filteredData.size();
     }
+
     @Nullable
     @Override
     public StudentRecord getItem(int position) {

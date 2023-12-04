@@ -4,56 +4,157 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-
-    <!-- Data Row -->
+    <!-- Student Name -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/studentNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Name:"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/studentNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Student Name"
-            android:textSize="12sp"/>
+            android:text=""
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Date Recorded -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dateRecordedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date Recorded:"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/dateRecordedTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date Recorded"
-            android:textSize="12sp"/>
+            android:text=""
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Remarks -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/remarksLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remarks:"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/remarksTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remarks"
-            android:textSize="12sp"/>
+            android:text=""
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/statusLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/statusTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Status"
-            android:textSize="12sp"/>
+            android:text=""
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Punishment -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/punishmentLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Punishment:"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/punishmentNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Punishment"
-            android:textSize="12sp"/>
+            android:text=""
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Violation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/violationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Violation:"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/violationNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Violation"
-            android:textSize="12sp"/>
+            android:text=""
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Guidance -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/guidanceLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guidance:"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/guidanceNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Guidance "
-            android:textSize="12sp"/>
+            android:text=""
+            android:textSize="12sp" />
     </LinearLayout>
 </LinearLayout>

@@ -13,7 +13,7 @@ public class StudentRecord {
     private String guidanceName;
     private String studentName;
 
-    public StudentRecord(String dateRecorded, String remarks, String status, String PunishmentName, String violationName, String guidanceName, String studentName) {
+    public StudentRecord(String dateRecorded, String remarks, String status, String punishmentName, String violationName, String guidanceName, String studentName) {
         this.dateRecorded = dateRecorded;
         this.remarks = remarks;
         this.status = status;
@@ -21,20 +21,20 @@ public class StudentRecord {
         this.violationName = violationName;
         this.guidanceName = guidanceName;
         this.studentName = studentName;
-
     }
-
-
 
     public String getDateRecorded() {
         return dateRecorded;
     }
+
     public String getRemarks() {
         return remarks;
     }
+
     public String getStatus() {
         return status;
     }
+
     public String getPunishmentName() {
         return punishmentName;
     }
@@ -42,12 +42,12 @@ public class StudentRecord {
     public String getViolationName() {
         return violationName;
     }
+
     public String getGuidanceName() {
         return guidanceName;
     }
+
     public String getStudentName() {
         return studentName;
     }
-
-
 }
