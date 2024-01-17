@@ -1,0 +1,17 @@
+<!-- custom_list_item.xml -->
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/announcementItemTextView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:textSize="18sp" />
+<!--    &lt;!&ndash; custom_list_item.xml &ndash;&gt;-->
+<!--<TextView-->
+<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:id="@+id/announcementItemTextView"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:padding="16dp"-->
+<!--android:textSize="18sp"-->
+<!--android:maxLines="5" />-->
