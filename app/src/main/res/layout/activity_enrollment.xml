@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".EnrollmentActivity">
+
+        <EditText
+            android:id="@+id/fnameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:hint="First Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/lnameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fnameEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Last Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/mnameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lnameEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Middle Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/enameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mnameEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Extension Name"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/balikAralLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/enameEditText"
+            android:layout_marginBottom="8dp"
+            android:text="Balik Aral:"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/balikAralLabel">
+
+            <RadioButton
+                android:id="@+id/yesRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/noRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/additionalFieldsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_below="@id/radioGroup">
+
+            <EditText
+                android:id="@+id/lastGradeLevelEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Last Grade Level"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/lastSchoolAttendedEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Last School Attended"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/lastSchoolYearEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="Last School Year"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/schoolYearEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/additionalFieldsLayout"
+            android:layout_marginBottom="8dp"
+            android:hint="School Year"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/birthDateEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/schoolYearEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Birth Date"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/birthPlaceEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/birthDateEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Birth Place"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/lrnEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/birthPlaceEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Learners Reference Number"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/genderEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lrnEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Gender"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/ageEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/genderEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Age"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/addressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ageEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Address"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/mothersNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addressEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Mother's Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/mothersNumEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mothersNameEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Mother's Number"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/fathersNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mothersNumEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Father's Name"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/fathersNumEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fathersNameEditText"
+            android:layout_marginBottom="8dp"
+            android:hint="Father's Number"
+            android:inputType="text" />
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fathersNumEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Save" />
+    </RelativeLayout>
+</ScrollView>
