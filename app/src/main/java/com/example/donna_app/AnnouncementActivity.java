@@ -1,7 +1,6 @@
 package com.example.donna_app;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -56,7 +54,7 @@ public class AnnouncementActivity extends AppCompatActivity {
     }
 
     private void fetchAnnouncementData() {
-        String url = "http://192.168.100.117:8000/api/announcements";
+        String url = "http://192.168.117.61:8000/api/announcements";
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
@@ -79,9 +77,9 @@ public class AnnouncementActivity extends AppCompatActivity {
                 }
         ) {
             @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
+            public Map<String, String> getHeaders() {
                 Map<String, String> headers = new HashMap<>();
-                headers.put("Authorization", "Bearer " + retrieveAccessToken());
+                headers.put("Content-Type", "application/json");
                 return headers;
             }
         };
@@ -127,10 +125,5 @@ public class AnnouncementActivity extends AppCompatActivity {
         } else {
             Log.e(TAG, "Invalid selected announcement index: " + selectedAnnouncementIndex);
         }
-    }
-
-    private String retrieveAccessToken() {
-        SharedPreferences sharedPreferences = getSharedPreferences(Constants.PREFERENCE_NAME, MODE_PRIVATE);
-        return sharedPreferences.getString(Constants.ACCESS_TOKEN_KEY, null);
     }
 }

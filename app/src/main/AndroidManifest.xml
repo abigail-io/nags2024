@@ -62,6 +62,21 @@
         <activity android:name=".EditTeacherProfileActivity">
 
         </activity>
+        <activity android:name=".AnnouncementActivity">
+
+        </activity>
+        <activity android:name=".ReadMoreActivity">
+
+        </activity>
+        <activity android:name=".EnrollmentActivity">
+
+        </activity>
+        <activity android:name=".ChartActivity">
+
+        </activity>
+        <activity android:name=".GuidanceHome">
+
+        </activity>
 <!--        <activity android:name=".CoachingScheduling"-->
 <!--            android:theme="@style/DialogTheme">-->
 

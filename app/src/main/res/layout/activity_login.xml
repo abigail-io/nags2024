@@ -149,5 +149,20 @@
         android:layout_marginStart="216dp"
         android:layout_marginTop="518dp"
         android:text="Login" />
+
+    <Button
+        android:id="@+id/btnGoToEnrollment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_marginTop="100dp"
+        android:text="Go to Enlist" />
+    <Button
+        android:id="@+id/btnGoToAnnouncement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnGoToEnrollment"
+        android:layout_marginTop="20dp"
+        android:text="Go to Announcement" />
 </RelativeLayout>
 

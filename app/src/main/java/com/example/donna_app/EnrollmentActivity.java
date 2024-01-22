@@ -85,7 +85,7 @@ public class EnrollmentActivity extends AppCompatActivity {
     }
 
     private void saveStudentDetails() {
-        String url = "http://192.168.100.117:8000/api/savenrollment";
+        String url = "http://192.168.117.61:8000/api/savenrollment";
 
         JSONObject jsonObject = new JSONObject();
         try {

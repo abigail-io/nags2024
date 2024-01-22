@@ -2,11 +2,17 @@ package com.example.donna_app;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -23,18 +29,32 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
 public class EditParentProfileActivity extends AppCompatActivity {
     private static final String TAG = "EditParentProfile";
-    private static final String API_URL_PROFILE_UPDATE = "http://192.168.100.117:8000/api/updateparent";
+    private ImageView imgGallery;
+    private final int GALLERY_REQ_CODE = 1000;
+    private static final String API_URL_PROFILE_UPDATE = "http://192.168.117.61:8000/api/updateparent";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_parent_profile);
 
+        imgGallery = findViewById(R.id.profileImageView);
+        Button btnGallery = findViewById(R.id.pickImageButton);
         Button btnSaveProfile = findViewById(R.id.updateParentProfileButton);
+
+        btnGallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchGalleryPicker();
+            }
+        });
 
         btnSaveProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +62,23 @@ public class EditParentProfileActivity extends AppCompatActivity {
                 updateProfile();
             }
         });
+    }
+
+    private void launchGalleryPicker() {
+        Intent iGallery = new Intent(Intent.ACTION_PICK);
+        iGallery.setData(MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(iGallery, GALLERY_REQ_CODE);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == GALLERY_REQ_CODE) {
+                imgGallery.setImageURI(data.getData());
+            }
+        }
     }
 
     private void updateProfile() {
@@ -55,16 +92,25 @@ public class EditParentProfileActivity extends AppCompatActivity {
             return;
         }
 
-        updateProfileInfo(parentFName, parentLName, parentAddress, parentPhone);
+        if (imgGallery.getDrawable() == null) {
+            updateProfileInfo(parentFName, parentLName, parentAddress, parentPhone, null);
+        } else {
+            String base64Image = getImageBase64();
+            updateProfileInfo(parentFName, parentLName, parentAddress, parentPhone, base64Image);
+        }
     }
 
-    private void updateProfileInfo(String fname, String lname, String address, String phone) {
+    private void updateProfileInfo(String fname, String lname, String address, String phone, @Nullable String base64Image) {
         JSONObject profileUpdate = new JSONObject();
         try {
             profileUpdate.put("fname", fname);
             profileUpdate.put("lname", lname);
             profileUpdate.put("address", address);
             profileUpdate.put("phone", phone);
+
+            if (base64Image != null) {
+                profileUpdate.put("uploads", base64Image);
+            }
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -139,6 +185,27 @@ public class EditParentProfileActivity extends AppCompatActivity {
     private String getParentPhone() {
         EditText parentPhoneEditText = findViewById(R.id.phoneEditText);
         return parentPhoneEditText.getText().toString();
+    }
+
+    private String getImageBase64() {
+        BitmapDrawable drawable = (BitmapDrawable) imgGallery.getDrawable();
+
+        if (drawable == null) {
+            Log.e(TAG, "Drawable is null. No image selected.");
+            return "";
+        }
+
+        Bitmap originalBitmap = drawable.getBitmap();
+
+        int targetWidth = 500;
+        int targetHeight = (int) (originalBitmap.getHeight() * (targetWidth / (float) originalBitmap.getWidth()));
+        Bitmap resizedBitmap = Bitmap.createScaledBitmap(originalBitmap, targetWidth, targetHeight, true);
+
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        resizedBitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+
+        byte[] byteArray = byteArrayOutputStream.toByteArray();
+        return Base64.encodeToString(byteArray, Base64.NO_WRAP);
     }
 
     private String retrieveAccessToken() {

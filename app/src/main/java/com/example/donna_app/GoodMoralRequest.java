@@ -68,7 +68,7 @@ public class GoodMoralRequest extends AppCompatActivity {
     }
 
     private void getDataFromApi() {
-        String apiUrl = "http://192.168.100.117:8000/api/goodmorals";
+        String apiUrl = "http://192.168.55.120:8000/api/goodmorals";
         String accessToken = retrieveAccessToken();
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
@@ -161,7 +161,7 @@ public class GoodMoralRequest extends AppCompatActivity {
     }
 
     private void addNewRequest() {
-        String apiUrl = "http://192.168.100.117:8000/api/goodmorals/create";
+        String apiUrl = "http://192.168.117.61:8000/api/goodmorals/create";
         String accessToken = retrieveAccessToken();
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);

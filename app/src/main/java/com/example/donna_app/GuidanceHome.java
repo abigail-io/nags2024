@@ -29,7 +29,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import androidx.appcompat.widget.Toolbar;
 
-public class ParentHome extends AppCompatActivity {
+public class GuidanceHome extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle drawerToggle;
@@ -59,25 +59,13 @@ public class ParentHome extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-//                    case R.id.nav_announcement:
-//                        Intent announcementIntent = new Intent(ParentHome.this, AnnouncementActivity.class);
-//                        startActivity(announcementIntent);
-//                        break;
                     case R.id.nav_dashboard:
-                        Intent dashboardIntent = new Intent(ParentHome.this, DashboardActivity.class);
+                        Intent dashboardIntent = new Intent(GuidanceHome.this, DashboardActivity.class);
                         startActivity(dashboardIntent);
                         break;
                     case R.id.nav_profile:
-                        Intent profileIntent = new Intent(ParentHome.this, ParentProfileActivity.class);
+                        Intent profileIntent = new Intent(GuidanceHome.this, ParentProfileActivity.class);
                         startActivity(profileIntent);
-                        break;
-                    case R.id.nav_schedule_coaching:
-                        Intent coachingScheduleIntent = new Intent(ParentHome.this, CoachingScheduling.class);
-                        startActivity(coachingScheduleIntent);
-                        break;
-                    case R.id.nav_chart:
-                        Intent chartIntent = new Intent(ParentHome.this, ChartActivity.class);
-                        startActivity(chartIntent);
                         break;
                     case R.id.nav_logout:
                         logout();
@@ -104,7 +92,7 @@ public class ParentHome extends AppCompatActivity {
                             Log.d("Logout", "Logout successful");
 
                             clearAccessToken();
-                            startActivity(new Intent(ParentHome.this, LoginActivity.class));
+                            startActivity(new Intent(GuidanceHome.this, LoginActivity.class));
                             finish();
                         });
                     }

@@ -36,7 +36,7 @@ public class StudentHome extends AppCompatActivity {
     private NavigationView navigationView;
     private CalendarView calendarView;
     private TextView welcomeTextView;
-    private String mJSONURLString = "http://192.168.100.117:8000/api/logout";
+    private String mJSONURLString = "http://192.168.117.61:8000/api/logout";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -76,7 +76,7 @@ public class ReadMoreActivity extends AppCompatActivity {
     }
 
     private void fetchComments(final TextView commentsTextView) {
-        String url = "http://192.168.100.117:8000/api/comments/" + announcementId;
+        String url = "http://192.168.117.61:8000/api/comments/" + announcementId;
 
         // Retrieve access token from shared preferences
         String token = retrieveAccessToken();
@@ -136,7 +136,7 @@ public class ReadMoreActivity extends AppCompatActivity {
     }
 
     private void saveComment(String name, String email, String comment) {
-        String url = "http://192.168.100.117:8000/api/announcements/" + announcementId + "/comments";
+        String url = "http://192.168.55.120:8000/api/announcements/" + announcementId + "/comments";
 
         // Retrieve access token from shared preferences
         String token = retrieveAccessToken();

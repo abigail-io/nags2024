@@ -44,7 +44,7 @@ public class CoachingScheduling extends AppCompatActivity {
     private Button button;
     private Spinner guidanceSpinner;
 
-    private String mGuidanceUrl = "http://192.168.100.17:8000/api/createcoaching"; // Replace with your actual guidance URL
+    private String mGuidanceUrl = "http://192.168.117.61:8000/api/createcoaching"; // Replace with your actual guidance URL
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
